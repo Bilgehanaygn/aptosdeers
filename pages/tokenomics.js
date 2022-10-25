@@ -6,7 +6,7 @@ import TokenomicsComponent from '../components/Tokenomics/Tokenomics';
 const Tokenomics = () => {
 
     return (
-        <Layout ><TokenomicsComponent/></Layout>
+        <Layout><TokenomicsComponent/></Layout>
     )
 }
 

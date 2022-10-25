@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import TwitterIcon from '../Icons/TwitterIcon/TwitterIcon';
 import DiscordIcon from '../Icons/DiscordIcon/DiscordIcon';
+import Link from 'next/link';
 
 const Header = () => {
     
@@ -21,16 +22,20 @@ const Header = () => {
                 <NavigationButton innerText="THE TEAM" givenLink="/team" enabled={true} activeRoute={router.pathname} />
                 <NavigationButton innerText="TOKENOMICS" givenLink="/tokenomics" enabled={true} activeRoute={router.pathname} />
 
-                <a href="/" >
-                    <Image src={omdLogo} alt="Logo" height="90" width="100" style={{cursor:"pointer"}} />
-                </a>
+                <Link href="/" >
+                    <a>
+                        <Image src={omdLogo} alt="Logo" height="90" width="100" style={{cursor:"pointer"}} />
+                    </a>
+                </Link>
                 <NavigationButton innerText="TRAIT MARKET" givenLink="/trait_market" enabled={true} activeRoute={router.pathname} />
                 <NavigationButton innerText="DEERSHOP" givenLink="/deer_shop" enabled={false} activeRoute={router.pathname} />
             </div>
             <div className={headerStyles['mobileheader-wrapper']} >
-                <a href="/" style={{zIndex:3}} >
-                    <Image src={omdLogo} alt="Logo" height="90" width="100" style={{cursor:"pointer"}} />
-                </a>
+                <Link href="/"  >
+                    <a style={{zIndex:3}}>
+                        <Image src={omdLogo} alt="Logo" height="90" width="100" style={{cursor:"pointer"}} />
+                    </a>
+                </Link>
                 <div onClick={()=>{setModalOpen(!modalOpen)}} style={{zIndex:3}} >
                     <MenuIcon />
                 </div>
@@ -44,8 +49,16 @@ const Header = () => {
                         <NavigationButton innerText="TRAIT MARKET" givenLink="/trait_market" enabled={true} activeRoute={router.pathname} />
                         <NavigationButton innerText="DEERSHOP" givenLink="/deer_shop" enabled={false} activeRoute={router.pathname} />
                         <div style={{marginTop: 20, display:"flex", flexDirection:"row", justifyContent:"space-around", alignItems:"center", width:140}} >
-                            <a href="https://twitter.com/AptosDeers_NFT" target="_blank" ><TwitterIcon width="35" height="35" /></a>
-                            <a href="https://discord.gg/aptosdeers" target="_blank"><DiscordIcon width="35" height="35" /> </a>
+                            <Link href="https://twitter.com/AptosDeers_NFT" target="_blank" >
+                                <a>
+                                    <TwitterIcon width="35" height="35" />
+                                </a>
+                            </Link>
+                            <Link href="https://discord.gg/aptosdeers" target="_blank">
+                                <a>
+                                    <DiscordIcon width="35" height="35" />
+                                </a>        
+                            </Link>
                         </div>
                     </div>
                     :

@@ -6,7 +6,7 @@ const Team = () => {
 
 
     return (
-        <Layout children={<TeamComponent/>} />
+        <Layout><TeamComponent/></Layout>
     )
 }
 

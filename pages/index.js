@@ -8,6 +8,6 @@ export default function HomePage() {
 
 
   return (
-    <Layout children={<HomeMain/>} />
+    <Layout><HomeMain/></Layout>
   )
 }

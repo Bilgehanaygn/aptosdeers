@@ -6,7 +6,7 @@ import RonmelSneakPeek from '../../assets/sneakpeeks/RonmelSneakPeek.png';
 import CornerSneakPeek from '../../assets/sneakpeeks/CornerSneakPeek.png';
 import XENSneakPeek from '../../assets/sneakpeeks/XENSneakPeek.png';
 import TwitterIcon from '../Icons/TwitterIcon/TwitterIcon';
-
+import Link from 'next/link';
 
 const TeamMember = ({props}) => {
 
@@ -22,10 +22,12 @@ const TeamMember = ({props}) => {
                     {props.name} | {props.role}
                 </div>
                 <div style={{fontWeight:700, fontSize:15, marginTop:2, marginBottom:10}} >
-                    <a href={props.twitter} target="_blank" > 
-                        <TwitterIcon/>
-                        @{props.twitter.split('.com/')[1]} 
-                    </a>
+                    <Link href={props.twitter} target="_blank" > 
+                        <a>
+                            <TwitterIcon/>
+                            @{props.twitter.split('.com/')[1]}
+                        </a>
+                    </Link>
                 </div>
                 <div className={teamStyles['explanation-wrapper' + (isHover ? '-visible' : '')]} >
                     {props.explanation}
