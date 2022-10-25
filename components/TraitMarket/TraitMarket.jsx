@@ -35,6 +35,8 @@ import AirEffect from '../../assets/trait_market/traits/element/Air.png';
 import FireEffect from '../../assets/trait_market/traits/element/Fire.png';
 import WaterEffect from '../../assets/trait_market/traits/element/Water.png';
 import NoElement from '../../assets/trait_market/traits/element/NoElement.png';
+import Link from 'next/link';
+import BackArrowIcon from '../Icons/BackArrowIcon/BackArrowIcon';
 
 const MarketItem = ({element, onClickCallback}) => {
 
@@ -199,7 +201,11 @@ const TraitMarket = () => {
         <div id={traitMarketStyles.traitmarketinnermain} >
             <div id={traitMarketStyles.traitmarketinnerbackgroundwrapper}></div>
             <div style={{width:"100%", display:"flex", flexDirection:"row", justifyContent:"space-between", padding:"10px 20px", boxSizing:"border-box"}} >
-                <span style={{width:"100px"}} ></span>
+                <Link href="/">
+                    <a>
+                        <BackArrowIcon width="35" height="35" />
+                    </a>
+                </Link>
                 {
                     wallets.map((wallet) => {
                         const option = wallet.adapter;
