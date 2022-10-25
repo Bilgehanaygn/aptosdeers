@@ -43,11 +43,11 @@ const Team = () => {
     const members = [
         {
             image:LeifanSneakPeek, name:"Leifan.SOL", twitter:"https://twitter.com/LeifanPOOR", role:"Founder", 
-            explanation:"Leifan is the co-founder and the team leader of Degen Bomb Gang. He comes up with visionary ideas, and ensures the success is achieved."
+            explanation:"Leifan is the co-founder and the team leader of Aptos Deers. He comes up with visionary ideas, and ensures the success is achieved."
         },
         {
             image:RonmelSneakPeek, name:"Ronmel", twitter:"https://twitter.com/Ronmel_SOL", role:"Comm. Manager", 
-            explanation:"Ronmel is an Blocksmith, Cet, Atadia, Just Ape, he rocks for almost every project in the space. He has been in the Solana Space for almost a year. He loves the vibes, chills and make the people love the vibes and makes them chill. He takes care of the community."
+            explanation:"Ronmel is a Blocksmith, a Cet, an Atadia, a Just Ape, he rocks for almost every project in the space. He has been in the Solana Space for almost a year. He loves the vibes, chills and make the people love the vibes and makes them chill. He takes care of the community."
         },
         {
             image:CornerSneakPeek, name:"Cornflouryyn", twitter:"https://twitter.com/cornflouryyn", role:"Developer", 
