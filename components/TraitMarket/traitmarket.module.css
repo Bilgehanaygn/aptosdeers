@@ -1,0 +1,181 @@
+#traitmarketinnermain{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#traitmarketinnerbackgroundwrapper{
+    position: absolute;
+    z-index:-1;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background-image: url('../../assets/trait_market/traitmarketbackground.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.bn29 {
+    border: none;
+    padding: 1em 3em;
+    outline: none;
+    color: white;
+    font-size: 1.1em;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    background: none;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.45);
+    overflow-x: hidden;
+}
+  
+.bn29:before,
+.bn29:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 10em;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: -2;
+    background-size: 400% 400%;
+    background: linear-gradient(
+        60deg,
+        #f79533,
+        #f37055,
+        #ef4e7b,
+        #a166ab,
+        #5073b8,
+        #1098ad,
+        #07b39b,
+        #6fba82
+    );
+}
+  
+.bn29:before {
+    -webkit-filter: blur(7px);
+    filter: blur(7px);
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    -webkit-animation: pulse 10s infinite ease;
+    animation: pulse 10s infinite ease;
+}
+  
+.bn29:after {
+    -webkit-filter: blur(0.3px);
+    filter: blur(0.3px);
+}
+  
+.bn29:hover:before {
+    width: 115%;
+    height: 115%;
+}
+
+.loading-spinner{
+    width:60px;
+    height:60px;
+    margin-top: 5px;
+    border: 2px solid black;
+    border-radius: 50%;
+    animation: spinner-keyframes 1.2s linear infinite;
+}
+
+@keyframes spinner-keyframes {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
+}
+
+
+#middle-main-wrapper{
+    width: 100%;
+    height:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#trait-wrapper{
+    display:grid;
+    width:100%;
+    grid-template-columns: auto auto auto auto;
+    column-gap:20px;
+    row-gap:15px;
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+#selected-deer-image{
+    width:100%; 
+    height:auto; 
+    position:sticky;
+    top:0px; 
+    left:0px; 
+    z-index:1;
+}
+
+.portrait-trait-image{
+    width:100%; 
+    height:auto; 
+    position:absolute; 
+    top:0px;
+    left:0px; 
+    z-index:2
+}
+
+.market-trait-image{
+    height:140px; 
+    width:auto;
+}
+
+.wallet-multi-button{
+    height: 50px;
+    line-height: 50px;
+    width: 175px;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.wallet-multi-button:hover{
+    background-color: grey;
+}
+
+
+@media only screen and (max-width: 800px) {
+    #traitmarketinnermain{
+        display: block;
+        height: 3000px;
+        overflow-y: auto;
+        
+    }
+    #traitmarketinnermain::-webkit-scrollbar {
+        display: none;
+    }
+    #middle-main-wrapper{
+        display: block;
+    }
+    #trait-wrapper{
+        width: 100%;
+        grid-template-columns: auto auto;
+        max-height: 400px;
+        overflow-y: auto;
+    }
+}
+
+
+
+

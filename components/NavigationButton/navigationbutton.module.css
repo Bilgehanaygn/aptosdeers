@@ -1,0 +1,41 @@
+.navigationbutton{
+    padding:10px;
+    font-size: 16px;
+    font-weight: 800;
+    background-color: #f2d0a4;
+    border-radius: 5px;
+    position: relative;
+}
+
+.navigationbutton:hover{
+    cursor: pointer;
+    background-color: #e6c49a;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.active_route{
+    padding:10px;
+    font-size: 16px;
+    font-weight: 800;
+    border-radius: 5px;
+    position: relative;
+    background-color: var(--c-primary);
+    color: #fff !important;
+}
+
+.active_route:hover{
+    cursor: pointer;
+    background-color: #ffa629;
+    transition: background-color 0.2s ease-in-out;
+}
+
+@media only screen and (max-width: 800px) {
+    .navigationbutton{
+        width: 140px;
+        text-align: center;
+    }
+    .active_route{
+        width: 140px;
+        text-align: center;
+    }
+}
